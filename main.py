@@ -1,5 +1,10 @@
 tasks=[]
 
+def addTask():
+    task = input("Please enter a task: ")
+    tasks.append(task)
+    print(f"Task '{task}'|added to the list.")
+
 if __name__ == "__main__":
     ##Create a loop to run the app
 
@@ -12,3 +17,21 @@ if __name__ == "__main__":
         print("2, Delete a task")
         print("3. List tasks")
         print("4. Quit")
+
+        choice = input("Enter your choice: ")
+        
+        if(choice=="1"):
+            addTask()
+
+        elif(choice=="2"):
+            deleteTask()
+
+        elif(choice=="3"):
+            listTasks()
+
+        elif(choice=="4"):
+            break
+        else:
+            print("Invalid choice please try agoin")
+
+    print("Goodbye ")
